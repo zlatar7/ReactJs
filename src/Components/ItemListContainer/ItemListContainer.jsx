@@ -1,11 +1,11 @@
-import ListaDeProductos from "../ItemCount/ListaDeProductos"
+import ItemList from "../ItemCount/ItemList"
 
 const itemListContainer = ({greeting}) => {
 
     return(
         <>
         <p>{greeting}</p>
-        <ListaDeProductos/>
+        <ItemList/>
         </>
     )
 }
