@@ -1,27 +1,21 @@
-import {Navbar, Nav, Container} from "react-bootstrap"
+import {Navbar, Nav} from "react-bootstrap"
+import { Link } from "react-router-dom"
 import CartWidget from "../CartWidget/CartWidget"
 
 export default function NavBar (){
 
-    const lista = [
-        {nombre: "HOME", enlace:"/"},
-        {nombre: "PRODUCTS", enlace:"/PRODUCTS"},
-        {nombre: "FAQs", enlace:"/FAQs"},
-        {nombre:"CONTACT", enlace:"/CONTACT"}]
-
     return(
 
    <>
-  <Navbar collapseOnSelect bg="primary" variant="dark">
-    <Container>
-    <Nav className="me-auto">
-    {lista.map(item=>{
-    return <Nav.Link href={item.enlace}> {item.nombre} </Nav.Link>})}
-    </Nav> 
-  
+  <Navbar /* fixed="top" */ bg="primary" variant="dark">
 
+    <Nav className="me-auto">
+      <Link className="text-light p-0 m-1" to={"/"}>HOME</Link>
+      <Link className="text-light p-0 m-1" to={"/preguntasfrecuentes"}>PREGUNTAS FRECUENTES</Link>
+      <Link className="text-light p-0 m-1 flex" to={"/contacto"}>CONTACTO</Link>
+    </Nav> 
     <CartWidget/>
-    </Container>
+
   </Navbar>
 
  
