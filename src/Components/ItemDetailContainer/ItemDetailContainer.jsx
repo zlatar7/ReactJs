@@ -10,7 +10,7 @@ export default function ItemDetailContainer() {
   const [producto, setProducto] = useState({});
 
   useEffect(()=>{
-      setTimeout(()=>{
+ /*      setTimeout(()=>{
         
         const listadoDeProductos = [
         {id: "1", precio: 9800, nombre: 'Zapatillas Deportivas', categoria: 'Sayt', pictureURL:"./img/zapas.png"},
@@ -21,6 +21,33 @@ export default function ItemDetailContainer() {
 
       }, 2000)
   }, [itemId])
+ */
+
+
+
+  
+  const promesaProd = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        
+        resolve([
+        {id: "1", precio: 9800, nombre: 'Zapatillas Deportivas', categoria: 'Sayt', pictureURL:"./img/zapas.png"},
+        {id: "2", precio: 5100, nombre: 'Jean', categoria: 'Oxford', pictureURL:"./img/jeans.png"},
+        {id: "3", precio: 8400, nombre: 'Campera', categoria: 'Uniqlo', pictureURL:"./img/campera.png"}])
+
+    }, 2000)
+})
+
+promesaProd
+    .then((res) => {
+        console.log(res)
+        setProducto(res.filter(item=> item.id === itemId)[0]);
+        
+    })
+    .catch((err) => {
+        console.log(err);
+    })
+},[itemId])
+
 
   return (
     <>
