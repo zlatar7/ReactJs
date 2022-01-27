@@ -46,9 +46,7 @@ promesaProd
     <>
       <ItemDetail producto={producto}/>
 
-      <Link className="m-4" to={"/item/1"}>ir al item 1</Link>
-      <Link className="m-4" to={"/item/2"}>ir al item 2</Link>
-      <Link className="m-4" to={"/item/3"}>ir al item 3</Link>      
+      <Link className="m-4" to={"/"}>VOLVER AL INICIO</Link>    
     </>
   );
 }

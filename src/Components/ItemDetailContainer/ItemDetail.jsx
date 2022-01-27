@@ -15,6 +15,7 @@ export default function ItemDetail({ producto }) {
                         <p>PRECIO: $ {producto.precio}</p>
                         <p>{producto.nombre}</p>
                         <p>MARCA: {producto.marca}</p>
+                        <p>STOCK: {producto.stock}</p>
                         </Card.Text>
                     </Card.Body>
                     </Card>
