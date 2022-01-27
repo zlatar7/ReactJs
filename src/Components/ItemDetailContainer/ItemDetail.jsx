@@ -6,7 +6,7 @@ export default function ItemDetail({ producto }) {
         <>
             {(producto.id) ?
                 <>
-                <Container>
+                <Container style={{maxWidth:"18em"}}>
                     <Card>
                     <Card.Img src={producto.pictureURL}/>
                     <Card.Body>
@@ -14,7 +14,7 @@ export default function ItemDetail({ producto }) {
                         <p>ITEM: N° {producto.id}</p>
                         <p>PRECIO: $ {producto.precio}</p>
                         <p>{producto.nombre}</p>
-                        <p>CATEGORÍA: {producto.categoria}</p>
+                        <p>MARCA: {producto.marca}</p>
                         </Card.Text>
                     </Card.Body>
                     </Card>

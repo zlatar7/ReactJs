@@ -4,7 +4,6 @@ import NavBar from './Components/Navbar/NavBar';
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer';
-import Categoria from './Components/ItemListContainer/Categoria';
 
 
 function App() {
@@ -20,14 +19,10 @@ function App() {
       <ItemListContainer/>
     </Route>
     <Route path="/categoria/:categoriaId">  
-      <Categoria/>
+      <ItemListContainer/>
     </Route>
     <Route path="/item/:itemId"> 
       <ItemDetailContainer/>
-    </Route>
-    <Route exact path="/preguntasfrecuentes">  
-    </Route>
-    <Route exact path="/contacto">  
     </Route>
   </Switch>
 

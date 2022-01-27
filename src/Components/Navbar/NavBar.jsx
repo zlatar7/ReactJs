@@ -1,4 +1,4 @@
-import {Navbar, Nav} from "react-bootstrap"
+import {Navbar} from "react-bootstrap"
 import { Link } from "react-router-dom"
 import CartWidget from "../CartWidget/CartWidget"
 
@@ -7,18 +7,17 @@ export default function NavBar (){
     return(
 
    <>
-  <Navbar /* fixed="top" */ bg="primary" variant="dark">
+  <Navbar bg="primary" variant="dark"  className="d-flex justify-content-start">
 
-    <Nav className="me-auto">
-      <Link className="text-light p-0 m-1" to={"/"}>HOME</Link>
-      <Link className="text-light p-0 m-1" to={"/preguntasfrecuentes"}>PREGUNTAS FRECUENTES</Link>
-      <Link className="text-light p-0 m-1 flex" to={"/contacto"}>CONTACTO</Link>
-    </Nav> 
-    <CartWidget/>
+
+
+      <Link className="text-light p-1" to={"/"}>INICIO</Link>
+      <Link className="text-light p-1" to={"/categoria/abrigo"}>ABRIGO</Link>
+      <Link className="text-light p-1" to={"/categoria/pantalones"}>PANTALONES</Link>
+      <Link className="text-light p-1" to={"/categoria/calzado"}>CALZADO</Link>
+        <CartWidget />
 
   </Navbar>
-
- 
 </>
     )
     
