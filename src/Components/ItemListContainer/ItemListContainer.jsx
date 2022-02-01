@@ -2,7 +2,6 @@ import React, { useEffect, useState} from "react";
 import ItemList from "./ItemList";
 import { useParams, Link } from "react-router-dom";
 import { Card, Container } from "react-bootstrap";
-import ItemCount from "./ItemCount";
 
  export default function ItemListContainer () {
 
@@ -62,7 +61,6 @@ import ItemCount from "./ItemCount";
                                         <p>CATEGORÍA: {item.categoria}</p>
                                         <p>STOCK: {item.stock}</p>
                                         </Card.Text>
-                                        <ItemCount/>
                                     </Card.Body>
                                     <Link className="m-4" to={"/item/" + item.id}>VER MAS DETALLES</Link>
                                     </Card>

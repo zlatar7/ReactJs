@@ -1,9 +1,9 @@
 import React, {useState} from "react";
-import { Button} from 'react-bootstrap';
+import { Button, Container} from 'react-bootstrap';
 
 
 
-export default function ItemCount ({producto}){
+export default function ItemCount ({producto, onAdd}){
 
     const [cantidad, setCantidad] = useState(1);
 
@@ -15,22 +15,17 @@ export default function ItemCount ({producto}){
         if (cantidad > 1) setCantidad(cantidad - 1)
     }
 
-    function onAdd (){
-        
-        alert( "Se ha agregado al carrito " +cantidad + " " + producto.titulo);
-        
-    }
-
     return(
         <>
-
+<Container>
    <Button variant="outline-primary" className="m-2" onClick={()=>restar()}>-</Button>{' '}
         {cantidad}
         <Button variant="outline-primary" className="m-2" onClick={()=>sumar()}>+</Button>
         <br />
         <br />
-        <Button onClick={()=> {onAdd()}} > AGREGAR AL CARRITO </Button>
-        <br />  
+        <Button onClick={()=> {onAdd(cantidad)}} > AGREGAR AL CARRITO </Button>
+        <br /> 
+        </Container> 
     </>
     )
 }

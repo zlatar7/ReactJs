@@ -39,3 +39,5 @@
 }
 
 button:focus{box-shadow: none !important;}
+
+:link{text-decoration: none;}
