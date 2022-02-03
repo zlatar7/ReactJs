@@ -1,16 +1,24 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext} from "react";
 import {useParams} from 'react-router-dom';
 import ItemDetail from "./ItemDetail";
+import { contexto } from "../Cart/CartContext";
+import Loader from "../Loader/Loader";
 
 
 export default function ItemDetailContainer() {
 
-  const { itemId } = useParams();
+  const { addToCart } = useContext(contexto);
 
   const [producto, setProducto] = useState({});
+  const [loading, setLoading] = useState(false);
+  const [added, setAdded] = useState(false);
+
+  const { itemId } = useParams();
 
   useEffect(()=>{
       
+  setLoading(true);
+
   const promesaProd = new Promise((resolve, reject) => {
     setTimeout(() => {
         
@@ -49,12 +57,19 @@ promesaProd
     .catch((err) => {
         console.log(err);
     })
+    .finally(() => setLoading(false))
 },[itemId])
+
+const onAdd = (count) => {
+  alert(`Se ha agregado ${count} ${producto.titulo} al carrito.`);
+  addToCart(producto, count);
+  setAdded(true);
+}
 
 
   return (
     <>
-      <ItemDetail producto={producto}/>   
+       {loading ? <Loader /> : <ItemDetail onAdd={onAdd} producto={producto} added={added} />}
     </>
   );
 }

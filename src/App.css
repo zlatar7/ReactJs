@@ -38,6 +38,8 @@
   }
 }
 
+h2{color: #0d6efd;}
+
 button:focus{box-shadow: none !important;}
 
 :link{text-decoration: none;}

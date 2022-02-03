@@ -1,22 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import { Card, Container} from "react-bootstrap";
 import { Link } from "react-router-dom";
 import ItemCount from "./ItemCount";
 
-export default function ItemDetail({ producto }) {
-
-    const [itemcount, setItemcount] = useState(true);
-
-    function onAdd (cantidad){
-        
-        alert( "Se ha agregado al carrito " + cantidad + " " + producto.titulo);
-        setItemcount(false);
-    }
+export default function ItemDetail({ producto, added, onAdd }) {
 
     return (
-        <>
-            {(producto.id) ?
-                <>
+            <>
                 <div style={{maxWidth:"65vw", marginTop:"2em", float:"left", padding:"0vw 10vw 0vw 20vw"}}>
                     <Card.Img style={{maxWidth:"20vw"}} src={producto.pictureURL}/>
                     <p>{producto.descripcion}</p>
@@ -29,18 +19,11 @@ export default function ItemDetail({ producto }) {
                         <p>{producto.nombre}</p>
                         <p>Marca: {producto.marca}</p>
                         <p>Stock: {producto.stock}</p>
-                        {(itemcount)?
-                            <ItemCount producto={producto} onAdd={onAdd} />
-                            :
-                            <Link to={"/Cart"}>IR AL CARRITO</Link>
-                        }
+
+                        {added ?  <Link to={"/Cart"}>IR AL CARRITO</Link> : <ItemCount producto={producto} onAdd={onAdd}/>}
+                        
                         </Container>
                 </div>
-               
-                </>
-                :
-                <> CARGANDO LA PAGINA </>
-            }
         </>
     )
 }

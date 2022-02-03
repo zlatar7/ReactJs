@@ -15,8 +15,9 @@ export default function NavBar (){
       <Link className="text-light p-1" to={"/categoria/abrigo"}>ABRIGO</Link>
       <Link className="text-light p-1" to={"/categoria/pantalones"}>PANTALONES</Link>
       <Link className="text-light p-1" to={"/categoria/calzado"}>CALZADO</Link>
-        <CartWidget />
-
+      <Link className="text-light p-1" to={"/cart"}><CartWidget />
+</Link>
+        
   </Navbar>
 </>
     )
