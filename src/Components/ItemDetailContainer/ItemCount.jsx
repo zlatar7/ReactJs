@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { Button, Container} from 'react-bootstrap';
+import { Button} from 'react-bootstrap';
 
 
 
@@ -17,15 +17,15 @@ export default function ItemCount ({producto, onAdd}){
 
     return(
         <>
-<Container>
+<span>
    <Button variant="outline-primary" className="m-2" onClick={()=>restar()}>-</Button>{' '}
         {cantidad}
         <Button variant="outline-primary" className="m-2" onClick={()=>sumar()}>+</Button>
         <br />
         <br />
+        </span> 
         <Button onClick={()=> {onAdd(cantidad)}} > AGREGAR AL CARRITO </Button>
         <br /> 
-        </Container> 
     </>
     )
 }

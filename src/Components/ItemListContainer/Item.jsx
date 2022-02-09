@@ -7,22 +7,23 @@ export default function Item ({producto}){
     return(
     <>
 
-<Container style={{display:'inline-block', maxWidth:"18em" ,textAlign:"center", margin:"5px", alignItems:"center"}}>
-    
-  <Card>
-        <p>producto N° {producto.id}</p>
-    <Card.Img variant="top" src={producto.pictureURL} />
-    <Card.Body>
-    <Card.Title>{producto.titulo}</Card.Title>
-    <Card.Text>
-      <p>Precio $ {producto.precio}</p>
-      <p>En stock: {producto.stock}</p>
-    </Card.Text>
-    </Card.Body>
-    <Link className="m-4" to={"/item/" + producto.id}>VER MAS DETALLES</Link>
-  </Card>
-</Container>
-
+ <div class="cards" style={{display:'inline-block', width:"21.07em" ,textAlign:"center", alignItems:"center"}}>
+  <Container className="p-4">
+      <Card className="p-4">
+      <Card.Img src={producto.pictureURL}/>
+      <Card.Body>
+          <Card.Text>
+          <p>ITEM: N° {producto.id}</p>
+          <p>PRECIO: $ {producto.precio}</p>
+          <p>{producto.titulo}</p>
+          <p>CATEGORÍA: {producto.categoria}</p>
+          <p>STOCK: {producto.stock}</p>
+          </Card.Text>
+      </Card.Body>
+      <Link className="m-4" to={"/item/" + producto.id}>VER MAS DETALLES</Link>
+      </Card>
+  </Container>
+ </div>      
     </>
     )
 }

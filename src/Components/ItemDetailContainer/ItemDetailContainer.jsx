@@ -23,7 +23,7 @@ export default function ItemDetailContainer() {
     setTimeout(() => {
         
         resolve([
-            {id: "1", precio: 9800, titulo: "Zapatillas Nike Gris/Negro", stock: 2, pictureURL:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScOB_MWGJC4R-tQi91-E7H-pfk9jSkQ-qvqOhyQCKyNxDIwPnJuB-wiCJ29E4hzI_kwX0&usqp=CAU", marca:"Nike",
+            {id: "1", precio: 9800, titulo: "Zapatillas Nike Gris/Negro", stock: 2, pictureURL:"https://lh3.googleusercontent.com/pw/AM-JKLVyifhfwh-lPtZiKJa7KB6B8h9ZbJRRCAQnhwIfrDYs5Jyr6J_cdMCX71cS922vgND_zWjR_AbtopV-_634vExjWyprThVouVnOVugvLLs-TSE8juJID4swAg3EnZ8KSywkPmIDSrzHsQfbpk9npvwwJg=s625-no?authuser=0", marca:"Nike",
              descripcion:"Zapatillas ideales para runners. Livianas y con las suelas reforzadas. Todos sus materiales son ecológicos."},
             {id: "2", precio: 7000, titulo: "Zapatillas Reebok Blancas", stock: 2, pictureURL:"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/zapatillas-reebok-1578400249.png?crop=1.00xw:0.789xh;0,0.174xh&resize=480:*", marca:"Reebok",
              descripcion:"Estas zapatillas poseen la mejor relacion precio-calidad del mercado. Sus materiales son reforzados, lo que las convierten en unas de las mas duraderas."},
@@ -39,9 +39,9 @@ export default function ItemDetailContainer() {
              descripcion:"Pantalón Mom con lazo para ajustar en la cintura, tiro medio. Estilo baggy."},
             {id: "8", precio: 3900, titulo: "Jean Cenitho Azul Oscuro", stock: 1, pictureURL:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-88IznGn7Xy0Z5CEINB53dO-a1NFL81B2Ew&usqp=CAU", marca: "Cenitho",
              descripcion:"Jean clásico, sin lavado y de tiro medio. Exelente precio de acuerdo a la calidad de esta marca. Edición limitada."},
-            {id: "9", precio: 6900, titulo: "Campera Inflada Negra", stock: 4, pictureURL:"https://www.digitalsport.com.ar/files/products/572107edf35fa-394991-500x500.jpg", marca:"Urus",
+            {id: "9", precio: 6900, titulo: "Campera Inflada Negra", stock: 4, pictureURL:"https://lh3.googleusercontent.com/pw/AM-JKLWXy9VZkS_cba93OCyyiWENaPVOa5kc261ATBLl6M4T2gPPgRWPcDKwmo9d0qwMwankrke2tnrBwb0C3dDhhtvivPp23wfY9T8t9VHNpIvYsU7HyS-rrTCnhsKg6-PxmPfy5Pxj0Hx_l_oo9bOjwWAGqw=s625-no?authuser=0", marca:"Urus",
              descripcion:"Abrigo de invierno relleno con pluma. Cómodo para el uso cotidiano y el trabajo. Último en todo lo que es moda."},
-            {id: "10", precio: 6900, titulo: "Campera Neoprene Columbia Negro", stock: 5, pictureURL:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmC5oEsgZO-7iv1jYygCweow7StKFdkWa4pw&usqp=CAU", marca:"Columbia",
+            {id: "10", precio: 6900, titulo: "Campera Neoprene Columbia Negro", stock: 5, pictureURL:"https://lh3.googleusercontent.com/pw/AM-JKLVPkgBwoNBl8rCVM31ao2PAWdLmHyxUEqa-Uaio6tamQBOHsvxjg4fRsP-ohua9WYt4fetyVAjIzDhZsiQ0pjk7LKgkgEuJdUbtQZTGs-8WqE3c30agPXooZt0KNxYiVi6QG25_82xWegs1JqPCoMUI3Q=s625-no?authuser=0", marca:"Columbia",
              descripcion:"Abrigo de material neoprene, cómodo y liviano, ideal para montaña o actividades recreativas. Capucha desmontable y bolsillos con cierre"},
             ])
 

@@ -49,23 +49,23 @@ import { Card, Container } from "react-bootstrap";
             <>
              <h1>Estoy en la categoria {categoriaId}</h1>
             {prodCategoria.map(item=>
-                            <div style={{display:'inline-block', maxWidth:"22em" ,textAlign:"center", alignItems:"center"}}>
-                                <Container className="p-4">
-                                    <Card className="p-4">
-                                    <Card.Img src={item.pictureURL}/>
-                                    <Card.Body>
-                                        <Card.Text>
-                                        <p>ITEM: N° {item.id}</p>
-                                        <p>PRECIO: $ {item.precio}</p>
-                                        <p>{item.titulo}</p>
-                                        <p>CATEGORÍA: {item.categoria}</p>
-                                        <p>STOCK: {item.stock}</p>
-                                        </Card.Text>
-                                    </Card.Body>
-                                    <Link className="m-4" to={"/item/" + item.id}>VER MAS DETALLES</Link>
-                                    </Card>
-                                </Container>        
-                                        </div>      
+                <div className="cards" style={{display:'inline-block', maxWidth:"22em" ,textAlign:"center"}}>
+                    <Container className="p-4">
+                        <Card className="p-4">
+                        <Card.Img src={item.pictureURL}/>
+                        <Card.Body>
+                            <Card.Text>
+                            <p>ITEM: N° {item.id}</p>
+                            <p>PRECIO: $ {item.precio}</p>
+                            <p>{item.titulo}</p>
+                            <p>CATEGORÍA: {item.categoria}</p>
+                            <p>STOCK: {item.stock}</p>
+                            </Card.Text>
+                        </Card.Body>
+                        <Link className="m-4" to={"/item/" + item.id}>VER MAS DETALLES</Link>
+                        </Card>
+                    </Container>        
+                </div>      
             )}
             </>
             :

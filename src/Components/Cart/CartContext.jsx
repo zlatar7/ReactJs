@@ -1,5 +1,6 @@
 import React, {useState, createContext} from "react";
 
+
 export const contexto = createContext();
 
 export default function CartContext ({children}){
@@ -29,10 +30,16 @@ export default function CartContext ({children}){
         setCart([])
       }
 
+      const totalPrice = () => {
+       return cart.map((item)=> item.item.precio * item.count).reduce((a, b) => a + b)
+      }    
 
+      const calculateAmount = () => {
+        return cart.map((item)=> item.count).reduce((a, b) => a + b)
+       }  
     return(
     <>
-    <contexto.Provider value={{ cart, addToCart, deleteItem, clearCart }}>
+    <contexto.Provider value={{ cart, addToCart, deleteItem, clearCart, totalPrice, calculateAmount }}>
     {children}
     </contexto.Provider>
 

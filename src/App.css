@@ -38,8 +38,34 @@
   }
 }
 
-h2{color: #0d6efd;}
+h2{color: #0d6efd;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+text-align: center;
+padding: 1em;}
 
 button:focus{box-shadow: none !important;}
 
+#footer{background-color: #0d6efd;
+  color: white;
+  min-height: 5em;
+font-size: small;
+}
+
+.carrito {
+  background-color: rgb(75, 174, 255);
+  margin: 0px 0.25rem;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  color: white;
+  font-weight: bold;
+}
+
 :link{text-decoration: none;}
+
+#dropDown{color: white;
+padding: 2px;}
+
+@media screen and (max-width: 600px){
+  .cards{width: 100% !important ; 
+}
+}
