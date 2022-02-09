@@ -2,9 +2,14 @@ import {Container, Navbar, NavDropdown} from "react-bootstrap"
 import { Link } from "react-router-dom"
 import CartWidget from "../CartWidget/CartWidget"
 import logo from "./logo.png";
+import { contexto } from "../Cart/CartContext";
+import React, {useContext} from "react";
 
 export default function NavBar (){
 
+  const {cart} = useContext(contexto);
+  const cartCount = cart.length;
+  
     return(
 
    <>
@@ -21,7 +26,7 @@ export default function NavBar (){
         </NavDropdown>
   </Container>
       
-        <Link className="text-light pe-1 justify-self-end" to={"/cart"}><CartWidget /></Link>
+        <Link className="text-light pe-1 justify-self-end" to={"/cart"}><CartWidget cartCount={cartCount}/></Link>
 
  
 </Navbar>
