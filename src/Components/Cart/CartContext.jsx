@@ -30,13 +30,17 @@ export default function CartContext ({children}){
         setCart([])
       }
 
+      //Este es para el precio total
       const totalPrice = () => {
-       return cart.map((item)=> item.item.precio * item.count).reduce((a, b) => a + b)
+        /*  return cart.map((item)=> item.item.precio * item.count).reduce((a, b) => a + b) */
+      return  cart.reduce((a, b) => a + (b.item.precio * b.count),0)
       }    
 
+      //Este es para la cantidad total
       const calculateAmount = () => {
-        return cart.map((item)=> item.count).reduce((a, b) => a + b)
-       }  
+      return cart.reduce((a, b) => a + b.count, 0)
+       }
+
     return(
     <>
     <contexto.Provider value={{ cart, addToCart, deleteItem, clearCart, totalPrice, calculateAmount }}>

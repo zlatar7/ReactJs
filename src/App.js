@@ -7,6 +7,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer';
 import CartContext from './Components/Cart/CartContext';
 import Footer from './Components/Footer/Footer';
+import Form from './Components/Form/Form';
 
 function App() {
 
@@ -29,6 +30,9 @@ function App() {
     </Route>
     <Route path="/Cart"> 
       <Cart/>
+    </Route>
+    <Route exact path="/form"> 
+      <Form/>
     </Route>
   </Switch>
 

@@ -23,7 +23,7 @@ export default function ItemDetail({ producto, added, onAdd }) {
             <p>Marca: {producto.marca}</p>
             <p>Stock: {producto.stock}</p>
 
-            {added ?  <Link to={"/Cart"}>TERMINAR MI COMPRA</Link> : <ItemCount producto={producto} onAdd={onAdd}/>}
+            {added ?  <Link to={"/Cart"}>IR AL CARRITO</Link> : <ItemCount producto={producto} onAdd={onAdd}/>}
 
         </Container>
     </Col>

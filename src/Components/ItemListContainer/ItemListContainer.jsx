@@ -16,7 +16,7 @@ import { getFirestore } from "../../firebase";
     
         const itemCollection = db.collection("items"); 
 
-        const coleccion = itemCollection/* .where('categoria', '===', categoriaId) */;
+        const coleccion = itemCollection
 
         itemCollection.get()
           .then((querySnapShot) => {

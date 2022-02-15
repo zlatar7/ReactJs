@@ -32,6 +32,7 @@ export default function Cart (){
                     <p>TOTAL A PAGAR: $ {total}</p>
                     <p>TOTAL DE PRODCUTOS A COMPRAR: {amount}</p>
                     <Button variant="outline-primary" className="m-2" onClick={() => clearCart()}>LIMPIAR EL CARRITO</Button>
+                    <Link to={"/form"}>TERMINAR LA COMPRA</Link>
                 </div>
             }
         </>
