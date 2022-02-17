@@ -38,14 +38,19 @@
   }
 }
 
-h2{color: #0d6efd;
+h2{color: #fd0d9d;
 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 text-align: center;
-padding: 1em;}
+margin: auto ;
+background-color: rgba(158, 158, 158, 0.74);
+width: fit-content;}
 
 button:focus{box-shadow: none !important;}
 
-#footer{background-color: #0d6efd;
+body{background-image: url(https://i.pinimg.com/originals/e5/0b/93/e50b93be311412d63fbeb320d692b552.jpg);
+  background-position:center;}
+
+#footer{background-color: #0d6dfd9f;
   color: white;
   min-height: 5em;
 font-size: small;
@@ -58,6 +63,22 @@ font-size: small;
   border-radius: 0.25rem;
   color: white;
   font-weight: bold;
+}
+
+.loader{display: flex;
+margin: 12em;
+justify-content: center;
+align-items: center;
+}
+
+.cards{display: inline-block;
+max-width: 22em ;
+text-align: center;
+}
+.cardItem{display: inline-block;
+width:21.07em;
+text-align: center;
+align-items: center;
 }
 
 :link{text-decoration: none;}

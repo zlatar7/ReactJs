@@ -14,7 +14,7 @@ export default function Cart (){
     useEffect(()=>{
         setTotal(totalPrice());
         setAmount(calculateAmount())
-    },[])
+    },[cart])
 
 
     return(

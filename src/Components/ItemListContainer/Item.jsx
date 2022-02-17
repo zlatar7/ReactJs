@@ -7,7 +7,7 @@ export default function Item ({producto}){
     return(
     <>
 
- <div className="cards" style={{display:'inline-block', width:"21.07em" ,textAlign:"center", alignItems:"center"}}>
+ <div className="cardItem">
   <Container className="p-4">
       <Card className="p-4">
       <Card.Img src={producto.pictureURL}/>
