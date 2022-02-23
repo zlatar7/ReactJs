@@ -3,7 +3,9 @@ import { getFirestore } from '../../firebase'
 import { useContext } from "react";
 import {contexto} from "../Cart/CartContext";
 import firebase from "firebase/app";
+import "react-bootstrap"
 import "firebase/firestore";
+import { Button } from "react-bootstrap";
 
 export default function Form() {
     
@@ -60,28 +62,34 @@ export default function Form() {
             
             )}
 
-            <div>
-                <h3>Ingresa tus datos:</h3>
-
+            <div id="form" className="shadow-lg">
+                <h3>INGRESA TUS DATOS PARA FINALIZAR LA COMPRA:</h3>
+                <br />
                 <input type="text" name="name" ref={nameRef} placeholder="Nombre y Apelllido" />
                 <br />
-
+                <br />
                 <input type="tel" name="tel" ref={mobileRef} placeholder="N° de Celular" />
+                <br />
                 <br />
 
                 <input type="email" name="email" ref={emailRef} placeholder="Email" />
                 <br />
+                <br />
 
                 <input type="text" name="state" ref={stateRef} placeholder="Provincia" />
+                <br />
                 <br />
 
                 <input type="text" name="city" ref={cityRef} placeholder="Ciudad" />
                 <br />
+                <br />
 
                 <input type="text" name="address" ref={addressRef} placeholder="Direccion" />
                 <br />
+                <br />
 
-                <button onClick={() => handleClick()} >FINALIZAR</button>
+                <Button onClick={() => handleClick()} >FINALIZAR</Button>
+
             </div>
         </>
     );

@@ -8,16 +8,23 @@ export default function ItemDetail({ producto, added, onAdd }) {
     return (
             <>
                 
-  <Row>
-    <Col style={{padding:"0"}} xs={8}>     
-        <Container style={{width:"50%", border:"solid black 1px", padding:"0", marginTop:"1em", background:"none"}}>
-            <Card.Img  src={producto.pictureURL}/>
-                <p style={{backgroundColor:"#4378ff", margin:"0", padding:"0.5em", color:"white"}}>{producto.descripcion}</p>
+  <Row style={{margin:"0", padding:"0"}}>
+    <Col id="containerDetail" xs={7} sm={8}>
+        <Container className=" cardColor border border-primary shadow-lg">
+            <Card.Img className="cards" src={producto.pictureURL}/>
+            <Container>
+                <p id="parrafoDetail">{producto.descripcion}</p>
+            </Container>
         </Container>
-            <Link className="m-4" to={"/"}>SEGUIR COMPRANDO</Link>                 
+        <br />
+        <br />
+        <Link className="p-2 bg-primary text-light border border-info border-2 rounded" to={"/"}>{added ? "SEGUIR COMPRANDO" : "VOLVER AL INICIO"}</Link> 
+        <br/>
+        <br/>
+        <br/>               
     </Col>
-    <Col style={{padding:"0"}} xs={4}>
-        <Container style={{borderLeft:"solid #0d6efd 1.5px",textAlign:"center", padding:"25% 0px 0px 0px" ,backgroundColor:"#dcdaff", height:"100%", width:"100%"}}>
+    <Col id="informacionDetail" className="shadow-lg" xs={5} sm={4}>
+        <Container className="p-0">
             <p>Precio: $ {producto.precio}</p>
             <p>{producto.nombre}</p>
             <p>Marca: {producto.marca}</p>
@@ -28,7 +35,6 @@ export default function ItemDetail({ producto, added, onAdd }) {
         </Container>
     </Col>
   </Row>
-
         </>
     )
 }

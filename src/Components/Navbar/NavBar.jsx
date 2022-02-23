@@ -13,7 +13,7 @@ export default function NavBar (){
     return(
 
    <>
-<Navbar sticky="top" bg="primary" className="mb-4">
+<Navbar sticky="top" className="navbar">
   
   <Navbar.Brand style={{paddingLeft:"2px", margin:"0"}}> <img src={logo} alt="logo" /> </Navbar.Brand>
   <Container className="justify-content-start ps-1 pe-0">

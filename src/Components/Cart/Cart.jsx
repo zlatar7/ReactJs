@@ -2,7 +2,7 @@ import React, {useContext, useState} from "react";
 import { Link } from 'react-router-dom';
 import { contexto } from './CartContext';
 import CartItem from './CartItem';
-import { Button } from "react-bootstrap";
+import { Button} from "react-bootstrap";
 import { useEffect } from "react";
 
 export default function Cart (){
@@ -20,19 +20,28 @@ export default function Cart (){
     return(
         <>
         {cart.length === 0 ?
-                <div>
-                 <h2>EL CARRITO SE ENCUENTRA VACÍO</h2>
-                    <div style={{textAlign:"center", margin:"2em", padding:"2em"}}>
-                        <Link to='/'>IR A COMPRAR</Link>
-                    </div>
+                <div style={{textAlign:"center", padding:"1em", margin:"5em 0em 15em 0em", width:"100%", alignItems:"center"}}>
+                 <div className="shadow-lg" style={{backgroundColor:"#d9d9e3de", padding:"1em", width:"fit-content", margin:"auto", border:"2.5px solid #ffffff8a", minHeight:"22em"}}>
+                    <h2 style={{backgroundColor:"transparent"}}>EL CARRITO SE ENCUENTRA VACÍO</h2>
+                    <br/>
+                    <img style={{maxWidth:"10em"}} src="https://cdn-icons.flaticon.com/png/512/4318/premium/4318459.png?token=exp=1645572661~hmac=46c7a3d9130d553016c404f6c9f189c1" alt="carrito vacio" />
+                    <br/>
+                    <br/>
+                    <Link className="links" to='/'>IR A COMPRAR</Link>
+                 </div>
                 </div>
                 :
-                <div style={{textAlign:"center"}}>
+                <div>
                     {cart.map(element => <CartItem key={element.item.id} producto={element} />)}
-                    <p>TOTAL A PAGAR: $ {total}</p>
-                    <p>TOTAL DE PRODCUTOS A COMPRAR: {amount}</p>
-                    <Button variant="outline-primary" className="m-2" onClick={() => clearCart()}>LIMPIAR EL CARRITO</Button>
-                    <Link to={"/form"}>TERMINAR LA COMPRA</Link>
+
+                    <div style={{backgroundColor:"white", margin:"1em auto 1em auto", width:"50%", textAlign:"center", border:"2px solid #0d6efd", borderRadius:"20px"}}>
+                        <p>TOTAL A PAGAR: $ {total}</p>
+                        <p>TOTAL DE PRODCUTOS A COMPRAR: {amount}</p>
+                            <Button className="m-2 border border-info" onClick={() => clearCart()}>LIMPIAR EL CARRITO</Button>
+                    </div>
+                    <div style={{margin:"2em auto 2em auto", width:"fit-content"}}>
+                    <Link className="p-3 bg-primary text-white border border-info border-3 rounded" to={"/form"}>TERMINAR LA COMPRA</Link>
+                    </div>
                 </div>
             }
         </>

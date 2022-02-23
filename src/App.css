@@ -1,68 +1,70 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #030029;
-  height: 8vh;
-  display: flex;
-  list-style: none;
-  align-items: center;
-  justify-content: space-evenly;
-  font-size: calc(10px + 2vmin);
-  color: #ffdea6;
-  margin-top: -3px;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 h2{color: #fd0d9d;
 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 text-align: center;
-margin: auto ;
-background-color: rgba(158, 158, 158, 0.74);
-width: fit-content;}
+margin: 1em auto auto auto !important;
+background-color: rgba(255, 255, 255, 0.959);
+width: fit-content;
+border-radius: 5px;}
 
-button:focus{box-shadow: none !important;}
+h3{color: #3e51ffe7;
+text-shadow: 0px 0px 6px #3e51ff98 ;}
+
+button:focus{box-shadow: none !important;
+}
 
 body{background-image: url(https://i.pinimg.com/originals/e5/0b/93/e50b93be311412d63fbeb320d692b552.jpg);
-  background-position:center;}
+background-position: top;
+background-size: contain;}
 
-#footer{background-color: #0d6dfd9f;
-  color: white;
-  min-height: 5em;
-font-size: small;
+p{color: #b8006e;
+font-weight: 700;}
+
+p:hover{color: #fd0d9d;}
+
+input{width: 100%;
+border: none;}
+
+input:hover{background-color: #becdffcc;}
+  
+#footer{background-color: #0d6dfde0;
+font-weight: bolder;
+text-align: center;
+align-self: center;
+min-height: 5em;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#informacionDetail{border-left: solid #0d6efd 2px;
+text-align: center;
+padding-top: 6em;
+background-color:#b1adff;
+}
+
+#parrafoDetail{background-color:"white";
+margin: 0.4em;
+background-color: rgba(255, 255, 255, 0.884);
+}
+
+#containerDetail{text-align: center;
+min-height: 22em;
+padding: 2em 5em 0em 5em;
+}
+
+.parrafoFooter{margin-bottom: 0;
+align-self: center;
+padding: 1em;
+}
+
+.navbar{ background-color: #0d6dfde0;
 }
 
 .carrito {
-  background-color: rgb(75, 174, 255);
-  margin: 0px 0.25rem;
-  padding: 0.25rem;
-  border-radius: 0.25rem;
-  color: white;
-  font-weight: bold;
+background-color: rgb(75, 174, 255);
+margin: 0px 0.25rem;
+padding: 0.25rem;
+border-radius: 0.25rem;
+color: white;
+font-weight: bold;
 }
 
 .loader{display: flex;
@@ -71,22 +73,59 @@ justify-content: center;
 align-items: center;
 }
 
+.cardItem:hover{transform: scale(1.05, 1.05);
+transition: 300ms;
+}
+.cardImg:hover{color: #0d6efd;
+}
+
 .cards{display: inline-block;
 max-width: 22em ;
 text-align: center;
 }
+
 .cardItem{display: inline-block;
 width:21.07em;
 text-align: center;
 align-items: center;
 }
 
-:link{text-decoration: none;}
+:link{text-decoration: none;
+}
+
+.links{color: #b8006e;}
+
+.links:hover{color: #fd0d9d;}
+
+.cardColor{background-color: #ffffffbb;
+border-radius: 20px;
+border-width: 0.15em;
+max-width:10em;
+}
 
 #dropDown{color: white;
 padding: 2px;}
 
-@media screen and (max-width: 600px){
-  .cards{width: 100% !important ; 
+#form{background-color: #c8deffea;
+margin: 1em auto 1em auto;
+max-width: 25em;
+padding: 1em 1em 1em 1em;
+text-align: center;
+border: 3px solid #c5cfddde;
 }
+
+
+
+
+@media screen and (max-width: 600px){
+
+p{font-size: 0.8em !important;}
+
+.cards{width: 100% !important ; 
+}
+
+#parrafoDetail{font-size: 0.6em;
+}
+
+#containerDetail{padding: 0;}
 }
