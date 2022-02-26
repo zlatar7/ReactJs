@@ -34,13 +34,13 @@ export default function Cart (){
                 <div>
                     {cart.map(element => <CartItem key={element.item.id} producto={element} />)}
 
-                    <div style={{backgroundColor:"white", margin:"1em auto 1em auto", width:"50%", textAlign:"center", border:"2px solid #0d6efd", borderRadius:"20px"}}>
+                    <div style={{backgroundColor:"white", margin:"1em auto 1em auto", width:"50%", textAlign:"center", border:"2px solid #0d6efd", borderRadius:"20px", padding:"2em 0em 2em 0em"}}>
                         <p>TOTAL A PAGAR: $ {total}</p>
                         <p>TOTAL DE PRODCUTOS A COMPRAR: {amount}</p>
                             <Button className="m-2 border border-info" onClick={() => clearCart()}>LIMPIAR EL CARRITO</Button>
-                    </div>
-                    <div style={{margin:"2em auto 2em auto", width:"fit-content"}}>
-                    <Link className="p-3 bg-primary text-white border border-info border-3 rounded" to={"/form"}>TERMINAR LA COMPRA</Link>
+                            <hr />
+                            <br />
+                            <Link className="p-3 bg-primary text-white border border-info border-3 rounded" to={"/Formulario"}>TERMINAR LA COMPRA</Link>
                     </div>
                 </div>
             }

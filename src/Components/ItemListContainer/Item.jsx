@@ -19,7 +19,7 @@ export default function Item ({producto}){
           <p>Stock: {producto.stock}</p>
           </Card.Text>
       </Card.Body>
-      <Link className="m-4 links" to={"/item/" + producto.id}>VER MAS DETALLES</Link>
+      <Link className="m-4 links" to={"/item/" + producto.id}>+ VER MAS DETALLES</Link>
       </Card>
   </Container>
  </div>      

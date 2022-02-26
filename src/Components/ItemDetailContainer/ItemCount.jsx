@@ -18,7 +18,7 @@ export default function ItemCount ({producto, onAdd}){
     return(
         <>
 
-    <Container style={{display:"inline-block", width:"fit-content"}}>
+    <Container style={{display:"inline-block", width:"fit-content", padding:"0"}}>
        
         <Button variant="outline-primary" onClick={()=>restar()}>-</Button>{' '}
         <p style={{display:"inline", margin:"0.5em"}}>{cantidad}</p>

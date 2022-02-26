@@ -15,10 +15,10 @@ export default function NavBar (){
    <>
 <Navbar sticky="top" className="navbar">
   
-  <Navbar.Brand style={{paddingLeft:"2px", margin:"0"}}> <img src={logo} alt="logo" /> </Navbar.Brand>
-  <Container className="justify-content-start ps-1 pe-0">
+  <Navbar.Brand className="m-0 pe-1"> <img src={logo} alt="logo" /> </Navbar.Brand>
+  <Container className="justify-content-start ps-1 pe-0 containerNav">
         <Link className="text-light ps-1" to={"/"}>INICIO</Link>
-        <div className="text-light ps-1">CONTACTO</div>
+        <Link className="text-light ps-1" to={"/"}>CONTACTO</Link>
         <NavDropdown title="CATEGORÍAS" id="dropDown">
           <NavDropdown.Item>  <Link className="text-primary" to={"/categoria/abrigo"}>ABRIGO</Link></NavDropdown.Item>
           <NavDropdown.Item>  <Link className="text-primary" to={"/categoria/pantalones"}>PANTALONES</Link></NavDropdown.Item>

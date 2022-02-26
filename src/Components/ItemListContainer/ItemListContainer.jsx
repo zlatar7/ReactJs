@@ -60,7 +60,7 @@ import Loader from "../Loader/Loader";
             <>
                   <h2>CATEGORIA: {categoriaId.toUpperCase()}</h2>
                   {resultCategoria.map(item=>
-                      <div className="cardItem">
+                      <div key={item.id} className="cardItem">
                           <Container className="p-4">
                               <Card className="shadow-lg p-4 rounded border-primary border-2">
                               <Card.Img className="border-primary border-bottom" src={item.pictureURL}/>
@@ -72,7 +72,7 @@ import Loader from "../Loader/Loader";
                                   <p>Stock: {item.stock}</p>
                                   </Card.Text>
                               </Card.Body>
-                              <Link className="m-4 links" to={"/item/" + item.id}>VER MAS DETALLES</Link>
+                              <Link className="m-4 links" to={"/item/" + item.id}>+ VER MAS DETALLES</Link>
                               </Card>
                           </Container>        
                       </div>      

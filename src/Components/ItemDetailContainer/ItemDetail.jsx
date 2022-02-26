@@ -8,9 +8,9 @@ export default function ItemDetail({ producto, added, onAdd }) {
     return (
             <>
                 
-  <Row style={{margin:"0", padding:"0"}}>
+  <Row style={{margin:"0", padding:"0", minHeight:"85vh"}}>
     <Col id="containerDetail" xs={7} sm={8}>
-        <Container className=" cardColor border border-primary shadow-lg">
+        <Container className=" cardColor border border-primary shadow-lg p-0">
             <Card.Img className="cards" src={producto.pictureURL}/>
             <Container>
                 <p id="parrafoDetail">{producto.descripcion}</p>

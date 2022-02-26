@@ -7,7 +7,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer';
 import CartContext from './Components/Cart/CartContext';
 import Footer from './Components/Footer/Footer';
-import Form from './Components/Form/Form';
+import Form from './Components/Formulario/Formulario';
 
 function App() {
 
@@ -31,7 +31,7 @@ function App() {
     <Route path="/Cart"> 
       <Cart/>
     </Route>
-    <Route exact path="/form"> 
+    <Route exact path="/Formulario"> 
       <Form/>
     </Route>
   </Switch>
