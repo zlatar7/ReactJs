@@ -43,21 +43,7 @@ El autor de este software es Guido Zlatar
 - En la consola del proyecto escribir: npm install formik --save
 - Una vez finalizado, para corregir los errores escribir: npm audit fix --force
 - Importar la libreria en el componente que se utilice.
-## How to set it up
-- Clonar este repositorio. Para hacerlo, ir al directorio del repositorio y escribir: npm install
-- Una vez finalizado escribir: npm start
-- El proyecto debería estar funcionando en tu browser
-
-**Boostrap**
-- En la consola del proyecto escribir: npm install react-bootstrap bootstrap@5.1.3
-- Importar la libreria en el componente que se utilice. Ejemplo: import Button from 'react-bootstrap/Button';
-
-**Formik**
-- En la consola del proyecto escribir: npm install formik --save
-- Una vez finalizado, para corregir los errores escribir: npm audit fix --force
-- Importar la libreria en el componente que se utilice.
-
 
 DEPLOY:
 
-Ultima actualización del archivo: 27/2/2022
+Ultima actualización del archivo: 28/2/2022

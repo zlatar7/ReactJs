@@ -15,41 +15,42 @@ export default function ItemDetailContainer() {
 
   const { itemId } = useParams();
 
-useEffect(() => {
+  useEffect(() => {
 
-  setLoading(true);
+    setLoading(true);
 
-  const db = getFirestore();
-  
-  const itemCollection = db.collection("items");
+    // SE OBTIENE LA COLECCIÓN "ITEMS" DE LA BASE DE DATOS DE FIRESTORE
 
-  const miItem = itemCollection.doc(itemId);
+    const db = getFirestore();
+    
+    const itemCollection = db.collection("items");
 
-  miItem.get()    
-    .then((doc) => {
+    const miItem = itemCollection.doc(itemId);
 
-      if (!doc.exists) {
-        console.log('no existe ese documento');
-        return
-      }
+    miItem.get()    
+      .then((doc) => {
 
-      console.log('item found');
-      setProducto({ id: doc.id, ...doc.data() });
+        if (!doc.exists) {
+          console.log('no existe ese documento');
+          return
+        }
 
-    })
-    .catch((err)=>{
-      console.log(err);
-    })
-    .finally(() => setLoading(false))
-},[itemId])
+        console.log('item found');
+        setProducto({ id: doc.id, ...doc.data() });
 
+      })
+      .catch((err)=>{
+        console.log(err);
+      })
+      .finally(() => setLoading(false))
+  },[itemId])
+
+//EL ITEM ES AGREGADO
 
 const onAdd = (count) => {
-  alert(`Se ha agregado ${count} ${producto.titulo} al carrito.`);
-  addToCart(producto, count);
-  setAdded(true);
-}
-
+    addToCart(producto, count);
+    setAdded(true);
+  }
 
   return (
     <>

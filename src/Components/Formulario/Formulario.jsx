@@ -79,7 +79,9 @@ export default function Formulario() {
 	{( {errors} ) => (
 			(orderId.length > 0) ? 
 				<>
-				<h3> Su orden es : {orderId}</h3>
+				<div className="shadow-lg" style={{backgroundColor:"#c8deffea", minHeight:"10em", padding:"1em", margin:"10em auto 10em auto", width:"fit-content", border:"4px solid #bdd2ffde", alignItems:"center", display:"flex"}}>
+				<h4> Su orden es : {orderId}</h4>
+				</div>
 			
 				</>
 				:

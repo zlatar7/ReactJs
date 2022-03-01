@@ -8,6 +8,7 @@ import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailCont
 import CartContext from './Components/Cart/CartContext';
 import Footer from './Components/Footer/Footer';
 import Form from './Components/Formulario/Formulario';
+import FAQs from './Components/FAQs/FAQs';
 
 function App() {
 
@@ -22,7 +23,7 @@ function App() {
     <Route exact path="/">  
       <ItemListContainer/>
     </Route>
-    <Route path="/categoria/:categoriaId">  
+    <Route path="/category/:categoriaId">  
       <ItemListContainer/>
     </Route>
     <Route path="/item/:itemId"> 
@@ -33,6 +34,9 @@ function App() {
     </Route>
     <Route exact path="/Formulario"> 
       <Form/>
+    </Route>
+    <Route exact path="/FAQs"> 
+      <FAQs/>
     </Route>
   </Switch>
 
