@@ -22,6 +22,7 @@ export default function ItemDetail({ producto, added, onAdd }) {
             {added ?
             <> 
             {/* MENSAJE DEL PRODUCTO AGREGADO */}
+
              <div className="mensajeProducto">
               <h4>Se ha agregado ({cantidad.pop()}) {ultimoProd.pop()} al carrito </h4>
              </div>
@@ -29,6 +30,7 @@ export default function ItemDetail({ producto, added, onAdd }) {
             :
             <>
             {/* FOTO Y DESCRIPCIÓN DEL PRODUCTO */}
+
            <Card.Img className="cards" src={producto.pictureURL}/>
              <Container>
               <p id="parrafoDetail">{producto.descripcion}</p>
@@ -43,6 +45,7 @@ export default function ItemDetail({ producto, added, onAdd }) {
         <br/>
         <br/>               
     </Col>
+
     <Col id="informacionDetail" className="shadow-lg" xs={5} sm={4}>
         <Container className="p-0">
          <p>Precio: $ {producto.precio}</p>

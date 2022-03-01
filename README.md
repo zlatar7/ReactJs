@@ -6,6 +6,8 @@ Se ha implementado todo el contenido visto en las clases mas algunas librerias (
 
 El software creado permite al supuesto cliente navegar por las distintas categorías de productos, ver su información, seleccionarlos, agregarlos a un carro de compras, y finalmente realizar el pedido ingresando los datos personales.
 
+<img src="https://www.loom.com/share/e4bda437328a4100aad2e93ab99066f6">
+
 El autor de este software es Guido Zlatar
 ## Features
 
@@ -43,7 +45,5 @@ El autor de este software es Guido Zlatar
 - En la consola del proyecto escribir: npm install formik --save
 - Una vez finalizado, para corregir los errores escribir: npm audit fix --force
 - Importar la libreria en el componente que se utilice.
-
-DEPLOY:
 
 Ultima actualización del archivo: 28/2/2022

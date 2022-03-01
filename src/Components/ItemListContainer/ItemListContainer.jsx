@@ -1,8 +1,8 @@
 import React, { useEffect, useState} from "react";
-import ItemList from "./ItemList";
-import { useParams, Link } from "react-router-dom";
 import { Card } from "react-bootstrap";
+import { useParams, Link } from "react-router-dom";
 import { getFirestore } from "../../firebase";
+import ItemList from "./ItemList";
 import Loader from "../Loader/Loader";
 
  export default function ItemListContainer () {
@@ -39,7 +39,7 @@ import Loader from "../Loader/Loader";
         console.log(err);
       })
 
-        }, [categoriaId])
+}, [categoriaId])
 
  const resultCategoria = prodCategoria.filter((item)=> item.categoria === categoriaId)
 
@@ -58,29 +58,29 @@ import Loader from "../Loader/Loader";
     <>
     {(resultCategoria.length > 0 ) ?
     <>
-          <h2>CATEGORIA: {categoriaId.toUpperCase()}</h2>
-          {resultCategoria.map(item=>
-              <div key={item.id} className="cardItem">
-                      <Card className="shadow-lg p-4 rounded border-primary border-2">
-                      <Card.Img className="border-primary border-bottom" src={item.pictureURL}/>
-                      <Card.Body>
-                          <Card.Text>
-                          <p>Precio: $ {item.precio}</p>
-                          <p>{item.titulo}</p>
-                          <p>Categoría: {item.categoria}</p>
-                          <p>Stock: {item.stock}</p>
-                          </Card.Text>
-                      </Card.Body>
-                      <Link className="links" to={"/item/" + item.id}>+ VER MAS DETALLES</Link>
-                      </Card>        
-              </div>          
-        )}
-        </>
-        :
-        <>
-        <Loader/>
-        </>
-        }
+      <h2>CATEGORIA: {categoriaId.toUpperCase()}</h2>
+      {resultCategoria.map(item=>
+        <div key={item.id} className="cardItem">
+          <Card className="shadow-lg p-4 rounded border-primary border-2">
+          <Card.Img className="border-primary border-bottom" src={item.pictureURL}/>
+          <Card.Body>
+            <Card.Text>
+            <p>Precio: $ {item.precio}</p>
+            <p>{item.titulo}</p>
+            <p>Categoría: {item.categoria}</p>
+            <p>Stock: {item.stock}</p>
+            </Card.Text>
+          </Card.Body>
+          <Link className="links" to={"/item/" + item.id}>+ VER MAS DETALLES</Link>
+          </Card>        
+        </div>          
+    )}
+    </>
+    :
+    <>
+    <Loader/>
+    </>
+    }
     </>
     :
     <>

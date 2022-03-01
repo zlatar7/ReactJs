@@ -5,7 +5,7 @@ export default function FAQs() {
 
     return (
         <>       
-    <Container className="shadow-lg bg-primary mt-4 mb-4 pt-1 pb-4">
+    <Container className="shadow-lg bg-info mt-4 mb-4 pt-1 pb-4 bg-opacity-75">
         <Accordion flush>
         <Accordion.Item eventKey="0">
             <Accordion.Header>¿HACEN ENVÍOS?</Accordion.Header>

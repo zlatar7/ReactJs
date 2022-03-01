@@ -1,9 +1,9 @@
+import React, {useContext} from "react";
 import {Container, Navbar, NavDropdown} from "react-bootstrap"
 import { Link } from "react-router-dom"
 import CartWidget from "../CartWidget/CartWidget"
-import logo from "./logo.png";
 import { contexto } from "../Cart/CartContext";
-import React, {useContext} from "react";
+import logo from "./logo.png";
 
 export default function NavBar (){
 
@@ -21,9 +21,9 @@ export default function NavBar (){
         <Link className="text-light ps-2" to={"/"}>HOME</Link>
         <Link className="text-light ps-2" to={"/FAQs"}>FAQs</Link>
         <NavDropdown title="CATEGORIES" id="dropDown">
-          <NavDropdown.Item>  <Link className="text-primary" to={"/category/abrigo"}>ABRIGO</Link></NavDropdown.Item>
-          <NavDropdown.Item>  <Link className="text-primary" to={"/category/pantalones"}>PANTALONES</Link></NavDropdown.Item>
-          <NavDropdown.Item>  <Link className="text-primary" to={"/category/calzado"}>CALZADO</Link></NavDropdown.Item>
+          <NavDropdown.Item> <Link className="text-primary" to={"/category/abrigo"}>ABRIGO</Link></NavDropdown.Item>
+          <NavDropdown.Item> <Link className="text-primary" to={"/category/pantalones"}>PANTALONES</Link></NavDropdown.Item>
+          <NavDropdown.Item> <Link className="text-primary" to={"/category/calzado"}>CALZADO</Link></NavDropdown.Item>
         </NavDropdown>
   </Container>
       

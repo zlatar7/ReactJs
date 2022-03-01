@@ -45,7 +45,7 @@ export default function ItemDetailContainer() {
       .finally(() => setLoading(false))
   },[itemId])
 
-//EL ITEM ES AGREGADO
+      //FUNCION QUE AGREGA EL ITEM AL CARRO
 
 const onAdd = (count) => {
     addToCart(producto, count);
