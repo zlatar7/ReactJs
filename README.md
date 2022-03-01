@@ -6,7 +6,7 @@ Se ha implementado todo el contenido visto en las clases mas algunas librerias (
 
 El software creado permite al supuesto cliente navegar por las distintas categorías de productos, ver su información, seleccionarlos, agregarlos a un carro de compras, y finalmente realizar el pedido ingresando los datos personales.
 
-<img src="https://www.loom.com/share/e4bda437328a4100aad2e93ab99066f6">
+<img src="public\ProyectoGif.gif">
 
 El autor de este software es Guido Zlatar
 ## Features
